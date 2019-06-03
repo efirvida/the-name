@@ -13,7 +13,7 @@ def the_name() -> Tuple[str, str]:
 
     for fname in glob.glob("files/*.txt"):
         with open(fname, 'r') as f:
-            owner = path.splitext(path.basename(fname))[0]
+            owner = path.splitext(path.basename(fname))[0].capitalize()
 
             for name in set([name.strip() for name in f.readlines()]):
                 names[name] = names[name] + 1
