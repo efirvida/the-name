@@ -7,7 +7,7 @@ import collections
 lists = glob.glob("*.txt")
 names = []
 for name_list in lists:
-    with file(name_list,'r') as _list:
+    with open(name_list,'r') as _list:
         names += [name.strip() for name in _list.readlines()]
 
 counter=collections.Counter(names)
